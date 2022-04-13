@@ -14,12 +14,20 @@
     "checker",
     "URL"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gscolombo/md-link-check"
+  },
   "scripts": {
     "check": "node cli.js ./files/file1.md",
     "test": "jest --verbose ./test"
   },
   "author": "Gabriel S.C.",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gscolombo/md-link-check/issues"
+  },
+  "homepage": "https://github.com/gscolombo/md-link-check/#readme",
   "jest": {
     "transformIgnorePatterns": []
   },

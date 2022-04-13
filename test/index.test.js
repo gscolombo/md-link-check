@@ -1,4 +1,4 @@
-import getFile from "../index.js";
+import getFile from "../src/index.js";
 
 const sampleResult = [
   {

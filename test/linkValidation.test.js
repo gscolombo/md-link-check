@@ -1,4 +1,4 @@
-import validateLink from "../linkValidation";
+import validateLink from "../src/linkValidation";
 
 const sampleLinks = [
   {
