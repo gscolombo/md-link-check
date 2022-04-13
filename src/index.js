@@ -37,7 +37,7 @@ async function getText(path, enc) {
 }
 
 async function getDirTexts(path_arg, enc) {
-  const absPath = path.join(__dirnameESM, path_arg);
+  const absPath = path.join(__dirnameESM, "..", path_arg);
   const files = await fs.promises.readdir(absPath, { encoding: enc });
   const texts = await Promise.all(
     files.map(async (file) => {
