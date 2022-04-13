@@ -30,7 +30,6 @@ async function processText(path, validate) {
 }
 
 const path = process.argv[2];
-console.log(process.argv);
 const validate =
   process.argv[3] === "-v" || process.argv[3] === "--validate" ? true : false;
 processText(path, validate);
