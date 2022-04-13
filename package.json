@@ -1,0 +1,35 @@
+{
+  "name": "md-link-check",
+  "version": "1.0.0",
+  "description": "A command-line program to check link status in .md files.",
+  "main": "./cli.js",
+  "type": "module",
+  "bin": {
+    "md-link-check": "./cli.js"
+  },
+  "preferGlobal": true,
+  "keywords": [
+    "markdown",
+    "link",
+    "checker",
+    "URL"
+  ],
+  "scripts": {
+    "check": "node cli.js ./files/file1.md",
+    "test": "jest --verbose ./test"
+  },
+  "author": "Gabriel S.C.",
+  "license": "ISC",
+  "jest": {
+    "transformIgnorePatterns": []
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "node-fetch": "^3.2.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+    "babel-plugin-transform-import-meta": "^2.1.1",
+    "jest": "^27.5.1"
+  }
+}
