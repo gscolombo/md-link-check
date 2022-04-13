@@ -5,7 +5,7 @@
   "main": "./cli.js",
   "type": "module",
   "bin": {
-    "md-link-check": "./cli.js"
+    "md-link-check": "./src/cli.js"
   },
   "preferGlobal": true,
   "keywords": [
