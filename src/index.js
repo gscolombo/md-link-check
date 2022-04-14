@@ -1,10 +1,6 @@
 import chalk from "chalk";
 import fs from "fs";
 import path, { dirname, extname } from "path";
-import { fileURLToPath } from "url";
-
-const __filenameESM = fileURLToPath(import.meta.url);
-const __dirnameESM = dirname(__filenameESM);
 
 function setError(error) {
   throw new Error(
@@ -37,7 +33,7 @@ async function getText(path, enc) {
 }
 
 async function getDirTexts(path_arg, enc) {
-  const absPath = path.join(__dirnameESM, "..", path_arg);
+  const absPath = path.join(dirname(path_arg), path_arg);
   const files = await fs.promises.readdir(absPath, { encoding: enc });
   const texts = await Promise.all(
     files.map(async (file) => {
