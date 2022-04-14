@@ -17,7 +17,7 @@ Link placeholder: {link_placeholder} <br>
 ⎆ Status: Error <br>
 ⎆ Status: ENOTFOUND <br> <br>
 
-<b>File name: file2.md</b> <br> 
+<b>File name: file2.md</b> <br>
 Link placeholder: {link_placeholder} <br>
 ⎆ Status: 200 - OK <br>
 
@@ -30,43 +30,47 @@ Link placeholder: {link_placeholder} <br>
 
 ```json
 [
-  [
-    { "filename": "file1.md" },
-    {
-      "id": 1,
-      "placeholder": "<link_placeholder>",
-      "url": "https://link1.com.br",
-      "status": "200 - OK"
-    },
-    {
-      "id": 2,
-      "placeholder": "<link_placeholder>",
-      "url": "https://link2.com",
-      "status": "200 - OK"
-    },
-    {
-      "id": 3,
-      "placeholder": "<link_placeholder>",
-      "url": "https://link2.com",
-      "status": "404 - Not Found"
-    }
-  ]
-  [
-    { "filename": "file2.md" },
-    {
-      "id": 1,
-      "placeholder": "<link_placeholder>",
-      "url": "https://link1.com.br",
-      "status": "200 - OK"
-    },
-    {
-      "id": 2,
-      "placeholder": "<link_placeholder>",
-      "url": "httpslink2.com",
-      "status": "Error",
-      "errorCode": "ERR_INVALID_URL"
-    },
-  ]
+  {
+    "filename": "file1.md",
+    "links": [
+      {
+        "id": 1,
+        "placeholder": "<link_placeholder>",
+        "url": "https://link1.com.br",
+        "status": "200 - OK"
+      },
+      {
+        "id": 2,
+        "placeholder": "<link_placeholder>",
+        "url": "https://link2.com",
+        "status": "200 - OK"
+      },
+      {
+        "id": 3,
+        "placeholder": "<link_placeholder>",
+        "url": "https://link2.com",
+        "status": "404 - Not Found"
+      }
+    ]
+  },
+  {
+    "filename": "file2.md",
+    "links": [
+      {
+        "id": 1,
+        "placeholder": "<link_placeholder>",
+        "url": "https://link1.com.br",
+        "status": "200 - OK"
+      },
+      {
+        "id": 2,
+        "placeholder": "<link_placeholder>",
+        "url": "httpslink2.com",
+        "status": "Error",
+        "errorCode": "ERR_INVALID_URL"
+      }
+    ]
+  }
 ]
 ```
 
