@@ -12,16 +12,21 @@ function getLinks(text, fileName) {
   const regexp =
     /\[([^\]]+)\]\((https?:\/\/(?:[^$#\s\.]+\.)+[\w]+\/[^\s]+)\)/gm;
 
-  const results = [{ filename: fileName }];
+  const file = { filename: fileName, links: [] };
 
   let match;
   let n = 1;
   while ((match = regexp.exec(text)) !== null) {
-    results.push({ id: n, placeholder: match[1], url: match[2] });
+    file.links.push({ id: n, placeholder: match[1], url: match[2] });
     n++;
   }
 
-  return results.length > 1 ? results : `No links found in file ${fileName}!`;
+  file.links =
+    file.links.length === 0
+      ? `No links found in file ${fileName}!`
+      : file.links;
+
+  return file;
 }
 
 async function getText(path, enc) {
@@ -33,7 +38,7 @@ async function getText(path, enc) {
 }
 
 async function getDirTexts(path_arg, enc) {
-  const absPath = path.join(dirname(path_arg), path_arg);
+  const absPath = path.join(dirname(path_arg), "..", path_arg);
   const files = await fs.promises.readdir(absPath, { encoding: enc });
   const texts = await Promise.all(
     files.map(async (file) => {
@@ -42,7 +47,7 @@ async function getDirTexts(path_arg, enc) {
         const ftext = await fs.promises.readFile(fpath, { encoding: enc });
         return { filename: file, data: ftext };
       } else {
-        return { filename: file, message: "Formato de arquivo não suportado!" };
+        return { filename: file, message: "File type not supported!" };
       }
     })
   );
