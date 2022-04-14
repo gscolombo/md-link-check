@@ -1,30 +1,30 @@
-# Markdown Validation
+# .md Files Link Validation
 
-That is my first Node.JS library. <br> It is a simple command-line program which receives a .md file path as parameter and validate each link in the file, if it has any. If, instead of passing a file path, the user pass a directory path, it will validate each link of each .md file in the directory. The output is formatted by default as a list to allow for a better visualization in the command-line: <br>
+That is my first Node.JS library. <br> It is a simple <b> command-line program </b>which receives a .md file path as parameter and validate each link in the file, if it has any. <br> If, instead of passing a file path, the user pass a directory path, it will validate each link of each .md file in the directory. <br> The output is formatted by default as a list to allow for a better visualization in the command-line: <br>
 
 ### Default output:
 
-Links validation results:
+<b>Links validation results: </b>
 
-File name: file1.md
-Link placeholder: {link_placeholder}
-⎆ Status: 200 - OK
+<b>File name: file1.md </b> <br>
+Link placeholder: {link_placeholder} <br>
+⎆ Status: 200 - OK <br>
 
-Link placeholder: {link_placeholder}
+Link placeholder: {link_placeholder} <br>
 ⎆ Status: 404 - Not Found
 
-Link placeholder: {link_placeholder}
-⎆ Status: Error
-⎆ Status: ENOTFOUND
+Link placeholder: {link_placeholder} <br>
+⎆ Status: Error <br>
+⎆ Status: ENOTFOUND <br> <br>
 
-File name: file2.md
-Link placeholder: {link_placeholder}
-⎆ Status: 200 - OK
+<b>File name: file2.md</b> <br> 
+Link placeholder: {link_placeholder} <br>
+⎆ Status: 200 - OK <br>
 
-Link placeholder: {link_placeholder}
-⎆ Status: 301 - Moved Permanently
+Link placeholder: {link_placeholder} <br>
+⎆ Status: 301 - Moved Permanently <br> <br>
 
-...but it can also output in JSON format passing the "-j" or "--json" flag: <br>
+<b>...but it can also output in JSON format passing the "-j" or "--json" flag: </b> <br>
 
 ### JSON output model:
 
@@ -70,4 +70,4 @@ Link placeholder: {link_placeholder}
 ]
 ```
 
-<br> If you have any suggestions of improvement, please contact me, I'll be really thankful!
+<br> If you have any suggestions of improvement, please contact me, I'll be <b>really</b> thankful! :)
